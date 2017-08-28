@@ -8,14 +8,16 @@
 <p>
 	<?php
 
-		$number = 1000;
-
-		for ($i = 0; $number > 50; $i++) {
-			$number /= 2;
+		for ($i=1; $i<=9; $i++) {
+			for ($j=1; $j<=9; $j++)
+			{
+				//echo $i." x ".$j."=".$i*$j."<br>";
+				$result = $i*$j;
+				echo sprintf("%d x %d = %d", $i, $j, $result)."<br>"; // почему тут не работает "%d x %d = %d\n" - для переноса строки и приходится добавлять <BR>??
+			}
+			echo "<br>"; // а тут, к примеру PHP_EOL не работает?
 		}
-		echo $i . '</br>';
-		echo '-------------------------<br>';
-		echo $number;
+
 
 	?>
 </p>
